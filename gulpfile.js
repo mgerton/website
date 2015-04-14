@@ -14,7 +14,7 @@ var config = {
 		destination: '/home/mgerton/preview.mattgerton.com',
 		hostname: 'mattgerton.com',
 		username: 'mgerton',
-		root: 'dist',
+		root: 'src',	// TODO: change to `dist` when the build task is fixed
 		incremental: true,
 		progress: true,
 		relative: true,
