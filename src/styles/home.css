@@ -1,0 +1,27 @@
+/*
+
+Sass/LESS version
+
+.home {
+  .about {
+    h1 {}
+    .blurb {}
+  }
+
+  .nav {
+    & > .links {
+      a {}
+    }
+  }
+}
+*/
+
+.home {}
+
+.home .about {}
+.home .about h1 {}
+.home .about .blurb {}
+
+.home .nav {}
+.home .nav > .links {}
+.home .nav > .links a {}
