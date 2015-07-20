@@ -32,7 +32,7 @@ var config = {
  * parallel if they were just defined inside of the array.
  */
 function serverSync() {
-	return gulp.src('dist')
+	return gulp.src('src')
 		.pipe(rsync(config.rsync));
 }
 
@@ -55,5 +55,6 @@ gulp.task('serve', serve({
 // Deploy tasks
 // gulp.task('deploy:classy', ['build:classy:html'], serverSync);
 // gulp.task('deploy', ['build'], serverSync);
+gulp.task('deploy', serverSync);
 
 // gulp.task('default', ['build', 'deploy']);
