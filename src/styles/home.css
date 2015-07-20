@@ -1,27 +1,154 @@
-/*
+/**
+ * Global styles
+ */
 
-Sass/LESS version
-
-.home {
-  .about {
-    h1 {}
-    .blurb {}
-  }
-
-  .nav {
-    & > .links {
-      a {}
-    }
-  }
+body {
+  background-color: rgb(47, 86, 118);
+  border-top: 10px solid rgb(101, 152, 194);
+  /*font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Arimo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Oxygen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(255, 255, 255);
 }
-*/
 
-.home {}
+h1 {
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-.home .about {}
-.home .about h1 {}
-.home .about .blurb {}
+.home .heading h1 {
+  font-weight: 700;
+  text-transform: lowercase;
+  margin-bottom: 20px;
+  text-shadow:
+    1px 1px rgb(72, 131, 180),
+    2px 2px rgb(72, 131, 180);
+}
+
+.home .blurb {
+  padding-left: 7px;
+}
+
+.home .links {
+  list-style: none;
+}
+
+.home .links li {
+  display: inline;
+  padding: 0 14px;
+  border-right: 1px solid rgb(255, 255, 255);
+}
+
+.home .links li:last-child {
+  border: none;
+}
+
+.home .links li a {
+  color: rgb(193, 214, 230);
+}
+
+.home .links li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+
+/*.home .about .blurb {}
 
 .home .nav {}
 .home .nav > .links {}
-.home .nav > .links a {}
+.home .nav > .links a {}*/
+
+
+/**
+ * Mobile styles: extra-small devices (< 768px)
+ */
+
+.home {
+  margin-top: 15%;
+}
+
+.home .heading h1 {
+  font-size: 48px;
+  letter-spacing: -1px;
+}
+
+.home .blurb {
+  padding-left: 3px;
+}
+
+.home .links {
+  padding-left: 3px;
+}
+
+
+/**
+ * Mobile styles: small devices (at least 768px)
+ */
+
+@media screen and (min-width: 768px) {
+  .home {
+    margin-top: 18%;
+  }
+
+  .home .heading h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+  }
+
+  .home .blurb {
+    padding-left: 3px;
+  }
+
+  .home .links {
+    padding-left: 3px;
+  }
+}
+
+/**
+ * Mobile styles: medium devices (at least 992px)
+ */
+
+@media screen and (min-width: 992px) {
+  .home {
+    margin-top: 21%;
+  }
+
+  .home .heading h1 {
+    font-size: 78px;
+    letter-spacing: -2px;
+  }
+
+  .home .blurb {
+    padding-left: 5px;
+  }
+
+  .home .links {
+    padding-left: 5px;
+  }
+}
+
+/**
+ * Mobile styles: large devices (at least 1200px)
+ */
+
+@media screen and (min-width: 1200px) {
+  .home {
+    margin-top: 15%;
+  }
+
+  .home .heading h1 {
+    font-size: 98px;
+    letter-spacing: -2px;
+  }
+
+  .home .blurb {
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 7px;
+  }
+
+  .home .links {
+    padding-left: 7px;
+  }
+}
