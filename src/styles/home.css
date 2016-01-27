@@ -3,19 +3,56 @@
  */
 
 body {
-  background-color: rgb(47, 86, 118);
-  border-top: 10px solid rgb(101, 152, 194);
+  /*background-color: rgb(47, 86, 118);*/
+  /*border-top: 10px solid rgb(101, 152, 194);*/
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.40),
+      rgba(0, 0, 0, 0.40)
+    ),
+    center 0
+    url(../images/chicago-sunset.jpg) no-repeat;
+
+  background-attachment: fixed;
+  background-size: cover;
+
   /*font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Arimo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Oxygen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Crimson Text", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Gentium Basic", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   color: rgb(255, 255, 255);
+  /*color: rgb(255, 253, 249);*/
 }
 
 h1 {
-  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Julius Sans One", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Open Sans Condensed", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+
+  text-align: center;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 114px;
+  font-size: 104px;
 }
 
+.heading {
+  padding: 19.5em 0 4em;
+}
+
+.heading hr {
+  width: 40%;
+}
+
+/*
 .home .heading h1 {
   font-weight: 700;
   text-transform: lowercase;
@@ -27,30 +64,41 @@ h1 {
 
 .home .blurb {
   padding-left: 7px;
-}
+}*/
 
 .home .links {
   list-style: none;
+  text-align: center;
+  padding-left: 0;
+  padding-top: 10em;
 }
 
 .home .links li {
   display: inline;
   padding: 0 14px;
-  border-right: 1px solid rgb(255, 255, 255);
-}
-
-.home .links li:last-child {
-  border: none;
 }
 
 .home .links li a {
-  color: rgb(193, 214, 230);
-}
-
-.home .links li a:hover {
+  line-height: 42px;
+  font-size: 32px;
   color: rgb(255, 255, 255);
 }
 
+/*.home .links li a:hover {
+  color: rgb(255, 255, 255);
+}*/
+
+.about {
+  padding-bottom: 4em;
+  text-align: center;
+}
+
+.blurb p {
+  font-size: 42px;
+  line-height: 52px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
 
 
 /*.home .about .blurb {}
@@ -64,7 +112,7 @@ h1 {
  * Mobile styles: extra-small devices (< 768px)
  */
 
-.home {
+/*.home {
   margin-top: 15%;
 }
 
@@ -79,7 +127,7 @@ h1 {
 
 .home .links {
   padding-left: 3px;
-}
+}*/
 
 
 /**
@@ -87,7 +135,7 @@ h1 {
  */
 
 @media screen and (min-width: 768px) {
-  .home {
+  /*.home {
     margin-top: 18%;
   }
 
@@ -102,7 +150,7 @@ h1 {
 
   .home .links {
     padding-left: 3px;
-  }
+  }*/
 }
 
 /**
@@ -110,7 +158,7 @@ h1 {
  */
 
 @media screen and (min-width: 992px) {
-  .home {
+  /*.home {
     margin-top: 21%;
   }
 
@@ -125,7 +173,7 @@ h1 {
 
   .home .links {
     padding-left: 5px;
-  }
+  }*/
 }
 
 /**
@@ -133,7 +181,7 @@ h1 {
  */
 
 @media screen and (min-width: 1200px) {
-  .home {
+  /*.home {
     margin-top: 15%;
   }
 
@@ -150,5 +198,5 @@ h1 {
 
   .home .links {
     padding-left: 7px;
-  }
+  }*/
 }
