@@ -2,17 +2,19 @@
  * Global styles
  */
 
-body {
-  /*background-color: rgb(47, 86, 118);*/
-  /*border-top: 10px solid rgb(101, 152, 194);*/
+html {
+  position: relative;
+  min-height: 100%;
+}
 
+body {
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.40),
       rgba(0, 0, 0, 0.40)
     ),
     center 0
-    url(../images/chicago-sunset.jpg) no-repeat;
+    url("../images/chicago-sunset.jpg") no-repeat;
 
   background-attachment: fixed;
   background-size: cover;
@@ -23,13 +25,21 @@ body {
   /*font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Crimson Text", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  font-family: "Gentium Basic", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Gentium Basic", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  /*font-family: "Vollkorn", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   color: rgb(255, 255, 255);
-  /*color: rgb(255, 253, 249);*/
+
+  margin-bottom: 60px;
 }
 
-h1 {
+
+.heading {
+  padding-bottom: 4em;
+}
+
+.heading h1 {
   /*font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Julius Sans One", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   /*font-family: "Open Sans Condensed", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
@@ -40,53 +50,18 @@ h1 {
 
   text-transform: uppercase;
   letter-spacing: 1px;
-  line-height: 114px;
-  font-size: 104px;
-}
+  /*line-height: 114px;
+  font-size: 104px;*/
 
-.heading {
-  padding: 19.5em 0 4em;
+  text-shadow:
+    0 1px 0 rgba(40,40,40,1),
+    0 2px 0 rgba(40,40,40,1),
+    0 3px 0 rgba(40,40,40,1);
 }
 
 .heading hr {
   width: 40%;
 }
-
-/*
-.home .heading h1 {
-  font-weight: 700;
-  text-transform: lowercase;
-  margin-bottom: 20px;
-  text-shadow:
-    1px 1px rgb(72, 131, 180),
-    2px 2px rgb(72, 131, 180);
-}
-
-.home .blurb {
-  padding-left: 7px;
-}*/
-
-.home .links {
-  list-style: none;
-  text-align: center;
-  padding-left: 0;
-  padding-top: 10em;
-}
-
-.home .links li {
-  display: inline;
-  padding: 0 14px;
-}
-
-.home .links li a {
-  line-height: 42px;
-  font-size: 32px;
-  color: rgb(255, 255, 255);
-}
-
-/*.home .links li a:hover {
-  color: rgb(255, 255, 255);
-}*/
 
 .about {
   padding-bottom: 4em;
@@ -96,61 +71,120 @@ h1 {
 .blurb p {
   font-size: 42px;
   line-height: 52px;
-  font-style: italic;
-  letter-spacing: 1px;
+  /*font-style: italic;*/
+  /*letter-spacing: 1px;*/
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
 
-/*.home .about .blurb {}
+.find-me-nav .links {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
 
-.home .nav {}
-.home .nav > .links {}
-.home .nav > .links a {}*/
+.find-me-nav .links li {
+  display: inline;
+  padding: 0 14px;
+}
 
+.find-me-nav .links li a {
+  line-height: 42px;
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+}
+
+/*.find-me-nav .links li a:hover {
+  color: rgb(255, 255, 255);
+}*/
 
 /**
  * Mobile styles: extra-small devices (< 768px)
  */
 
-/*.home {
-  margin-top: 15%;
+.heading {
+  padding-top: 8em;
 }
 
-.home .heading h1 {
-  font-size: 48px;
-  letter-spacing: -1px;
+.heading h1 {
+  letter-spacing: 1px;
+  line-height: 108px;
+  font-size: 98px;
 }
 
-.home .blurb {
-  padding-left: 3px;
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .heading h1 {
+    letter-spacing: 1px;
+    line-height: 164px;
+    font-size: 154px;
+  }
 }
-
-.home .links {
-  padding-left: 3px;
-}*/
-
 
 /**
  * Mobile styles: small devices (at least 768px)
  */
 
 @media screen and (min-width: 768px) {
-  /*.home {
-    margin-top: 18%;
+  body {
+    margin-bottom: 88px;
   }
 
-  .home .heading h1 {
-    font-size: 64px;
-    letter-spacing: -2px;
+  .heading {
+    padding-top: 35em;
   }
 
-  .home .blurb {
-    padding-left: 3px;
+  .heading h1 {
+    line-height: 164px;
+    font-size: 154px;
   }
 
-  .home .links {
-    padding-left: 3px;
-  }*/
+  .blurb p {
+    line-height: 62px;
+    font-size: 52px;
+  }
+
+  footer {
+    height: 88px;
+  }
+
+  .find-me-nav .links li a {
+    line-height: 52px;
+    font-size: 42px;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: landscape) {
+  body {
+    margin-bottom: 68px;
+  }
+
+  .heading {
+    padding-top: 8em;
+  }
+
+  .heading h1 {
+    line-height: 108px;
+    font-size: 98px;
+  }
+
+  .blurb p {
+    line-height: 52px;
+    font-size: 42px;
+  }
+
+  footer {
+    height: 68px;
+  }
+
+  .find-me-nav .links li a {
+    line-height: 42px;
+    font-size: 32px;
+  }
 }
 
 /**
@@ -158,22 +192,23 @@ h1 {
  */
 
 @media screen and (min-width: 992px) {
-  /*.home {
-    margin-top: 21%;
+  body {
+    margin-bottom: 68px;
   }
 
-  .home .heading h1 {
-    font-size: 78px;
-    letter-spacing: -2px;
+  .heading {
+    padding-top: 19.5em;
   }
 
-  .home .blurb {
-    padding-left: 5px;
+  .heading h1 {
+    letter-spacing: 1px;
+    line-height: 114px;
+    font-size: 104px;
   }
 
-  .home .links {
-    padding-left: 5px;
-  }*/
+  footer {
+    height: 68px;
+  }
 }
 
 /**
@@ -181,22 +216,21 @@ h1 {
  */
 
 @media screen and (min-width: 1200px) {
-  /*.home {
-    margin-top: 15%;
+  body {
+    margin-bottom: 68px;
   }
 
-  .home .heading h1 {
-    font-size: 98px;
-    letter-spacing: -2px;
+  .heading {
+    padding-top: 21em;
   }
 
-  .home .blurb {
-    font-size: 16px;
-    line-height: 1.6;
-    padding-left: 7px;
+  .heading h1 {
+    letter-spacing: 1px;
+    line-height: 130px;
+    font-size: 120px;
   }
 
-  .home .links {
-    padding-left: 7px;
-  }*/
+  footer {
+    height: 68px;
+  }
 }
