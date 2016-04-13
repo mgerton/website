@@ -33,10 +33,12 @@
   padding: 40px;
 }
 
-.slide-panel .close {
+.slide-panel > .close {
   color: #fff;
   opacity: 1;
-  font-weight: 300;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .slide-panel .title, .slide-panel .content {
@@ -44,15 +46,19 @@
   margin: 0;
 }
 
-.slide-panel .title {
-  /*background: #0d77b6;*/
+.slide-panel > .content h3 {
+  font-size: 28px;
+  line-height: 38px;
+  font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
-/*.slide-panel > .title h3 {
-  color: #afdefa;
-  font-size: 1.9em;
-  font-weight: 300;
-}*/
+.slide-panel > .content p, .slide-panel > .close {
+  font-size: 18px;
+  line-height: 28px;
+}
 
 .slide-panel > .content a {
   display: block;

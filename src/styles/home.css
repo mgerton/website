@@ -161,6 +161,12 @@ footer {
   }
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .about .button-container:last-child {
+    margin-top: 0;
+  }
+}
+
 /**
  * Mobile styles: small devices (at least 768px)
  */
@@ -171,7 +177,7 @@ footer {
   }
 
   .heading {
-    padding-top: 35em;
+    padding-top: 30em;
   }
 
   .heading h1 {
@@ -188,9 +194,13 @@ footer {
     height: 88px;
   }
 
+  .find-me-nav .links li {
+    padding: 0 18px;
+  }
+
   .find-me-nav .links li a {
-    line-height: 52px;
-    font-size: 42px;
+    line-height: 70px;
+    font-size: 60px;
   }
 }
 
