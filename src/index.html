@@ -12,33 +12,40 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="/styles/home.css">
-  <!-- <link rel="stylesheet" href="/styles/slideout.css"> -->
+  <link rel="stylesheet" href="/styles/slideout.css">
 
-  <!-- <script src="//rawgit.com/yuanqing/malarkey/master/dist/malarkey.min.js"></script> -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/slideout/0.1.12/slideout.min.js"></script> -->
-  <!-- <script src="scripts/main.js"></script> -->
+  <script src="scripts/main.js"></script>
 </head>
 <body>
-  <!-- <div class="slide-panel slideout-about">
-    <p>Lorem Ipsum</p>
-  </div> -->
+  <div class="overlay" aria-hidden="true"></div>
+  <div class="slide-panel slide-panel-vertical slide-panel-left slideout-about">
+    <a class="close offcanvas-toggle">
+      Close <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+    <div class="content">
+      <h3>About Me</h3>
+      <p>I am a front-end focused, full-stack developer living in Chicago.</p>
+      <p>Currently I am just adding content here to for mockup purposes. Eventually, this will be removed in favor of actual content that will s erve to describe to visitors who I am and how I work, but for now, this should suffice. Eventually I hope to finish this site to actually showcase a thing or two about building a basic website. I plan to wrap this up soon, but not before adding a few more features and polishing the responsive parts of the site.</p>
+    </div>
+  </div>
   <main class="container home" role="main">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 heading">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 heading">
         <h1>Matt Gerton</h1>
         <hr>
       </div>
     </div>
     <div class="row">
-      <!-- <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about">
-        <div class="blurb">
-          <p>I am a <span class="role"></span></p>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 about">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6 button-container container-about">
+            <a href="#" class="btn btn-primary btn-about offcanvas-toggle">About Me</a>
+          </div>
+          <div class="col-sm-12 col-md-5 col-lg-5 button-container container-resume">
+            <a href="/resume/" class="btn btn-primary btn-resume">Résumé</a>
+          </div>
         </div>
-      </section> -->
-      <section class="col-lg-12 col-md-12 col-sm-12 col-xs-12 about">
-        <a href="#" class="btn btn-primary btn-about">About Me</a>
-        <a href="/resume/" class="btn btn-primary btn-resume">Resume</a>
-      </section>
+      </div>
     </div>
   </main>
   <footer>

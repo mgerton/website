@@ -1,35 +1,29 @@
-// var malarkey = require('malarkey');
-
+// TODO: refactor
 function main() {
-  // var roles = document.querySelector('.role');
-  // var options = {
-  //   typeSpeed: 65,
-  //   deleteSpeed: 65,
-  //   pauseDelay: 2000,
-  //   loop: true,
-  //   postfix: '.'
-  // };
+  var aboutSection = document.querySelector('.slideout-about');
+  var overlay = document.querySelector('.overlay');
+  var aboutButton = document.querySelector('.btn-about');
+  var closeLink = document.querySelector('.slide-panel .close');
 
-  // malarkey(roles, options)
-  //   .type('web developer').pause().delete()
-  //   .type('beer geek').pause().delete()
-  //   .type('dreamer').pause().delete()
-  //   .type('problem solver').pause().delete()
-  //   .type('comic nerd').pause().delete()
-  //   .type('music lover').pause().delete()
-  //   .type('typography nerd').pause().delete()
-  //   .type('sports fan').pause().delete();
+  var toggleElements = [
+    aboutButton,
+    closeLink,
+    overlay
+  ];
 
-  // var slideout = new Slideout({
-  //   'panel': document.querySelector('.home'),
-  //   'menu': document.querySelector('.slide-panel'),
-  //   'padding': 256,
-  //   'tolerance': 70
-  // });
+  function toggleOffCanvas(e) {
+      e.preventDefault();
 
-  // document.querySelector('.btn-about').addEventListener('click', function() {
-  //   slideout.toggle();
-  // });
+      aboutButton.classList.toggle('active');
+      closeLink.classList.toggle('active');
+
+      aboutSection.classList.toggle('slide-panel-open');
+      overlay.classList.toggle('visible');
+  }
+
+  toggleElements.forEach(function (el) {
+    el.addEventListener('click', toggleOffCanvas, false);
+  });
 }
 
 window.onload = main;

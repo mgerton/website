@@ -16,7 +16,7 @@ body {
     center 0
     url("../images/chicago-sunset.jpg") no-repeat;
 
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-size: cover;
 
   /*font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
@@ -68,7 +68,7 @@ body {
   text-align: center;
 }
 
-.about .btn {
+.about .button-container .btn {
   border-color: rgb(255,255,255);
   border-radius: 0;
   border-width: 2px;
@@ -76,22 +76,12 @@ body {
 
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  padding: 10px 46px;
-  margin: 0 18px;
 
-/*  border-color: #ed982a;
-  color: #ed982a;
-*/
   border-color: rgb(239,174,90);
   color: rgb(239,174,90);
+}
 
-/*  border-color: #8296bf;
-  color: #8296bf;
-*/}
-
-.about .btn:hover {
+.about .button-container .btn:hover {
   background-color: rgb(239,174,90);
   color: rgb(255,255,255);
 }
@@ -145,11 +135,29 @@ footer {
   font-size: 98px;
 }
 
+.about .button-container .btn {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 10px 46px;
+  margin: 0 18px;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
   .heading h1 {
     letter-spacing: 1px;
     line-height: 164px;
     font-size: 154px;
+  }
+
+  .about .button-container:last-child {
+    margin-top: 32px;
+  }
+
+  .about .button-container .btn {
+    font-size: 40px;
+    line-height: 50px;
+    padding: 20px 46px;
+    /*margin: 0 18px;*/
   }
 }
 
@@ -234,6 +242,14 @@ footer {
     font-size: 104px;
   }
 
+  .about .button-container.container-about {
+    text-align: right;
+  }
+
+  .about .button-container.container-resume {
+    text-align: left;
+  }
+
   footer {
     height: 68px;
   }
@@ -256,6 +272,14 @@ footer {
     letter-spacing: 1px;
     line-height: 130px;
     font-size: 120px;
+  }
+
+  .about .button-container.container-about {
+    text-align: right;
+  }
+
+  .about .button-container.container-resume {
+    text-align: left;
   }
 
   footer {

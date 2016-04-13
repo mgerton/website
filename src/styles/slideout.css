@@ -1,36 +1,147 @@
-body {
-  width: 100%;
-  height: 100%;
-}
+/* General styles for all menus */
 
-.slideout-menu {
-  position: fixed;
-  left: 0;
+.overlay {
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 0;
-  width: 256px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  display: none;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+
+  /* overlay transition properties */
+  -webkit-transition: visibility 0.3s ease,
+                      opacity 0.3s ease;
+
+  -moz-transition: visibility 0.3s ease,
+                   opacity 0.3s ease;
+
+  transition: visibility 0.3s ease,
+              opacity 0.3s ease;
 }
 
-.slideout-panel {
-  position: relative;
-  z-index: 1;
+.overlay.visible {
+  visibility: visible;
+  opacity: 1;
 }
 
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
+.slide-panel {
+  background: rgb(40, 40, 40);
+  position: fixed;
+  padding: 40px;
 }
 
-.slideout-open .slideout-menu {
+.slide-panel .close {
+  color: #fff;
+  opacity: 1;
+  font-weight: 300;
+}
+
+.slide-panel .title, .slide-panel .content {
+  padding: 20px;
+  margin: 0;
+}
+
+.slide-panel .title {
+  /*background: #0d77b6;*/
+}
+
+/*.slide-panel > .title h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  font-weight: 300;
+}*/
+
+.slide-panel > .content a {
   display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
 }
 
-.slideout-about {
-  background-color: rgba(33,33,33,1);
+.slide-panel > .content a:hover {
+  background: #258ecd;
+}
+
+.slide-panel > .content a:active {
+  background: #afdefa;
+  color: #47a3da;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+
+/* TODO: move to main style component */
+.slide-panel-vertical {
+  width: 600px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+/*.slide-panel-vertical a {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em;
+}*/
+
+/* Vertical menu that slides from the left or right */
+
+.slide-panel-left {
+  left: -600px;
+}
+
+.slide-panel-left.slide-panel-open {
+  left: 0px;
+}
+
+/* Push classes applied to the body */
+
+/* Transitions */
+
+/* TODO: consider moving to main style component */
+.slide-panel {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+/*@media screen and (max-width: 55.1875em){
+
+  .slide-panel-horizontal {
+    font-size: 75%;
+    height: 110px;
+  }
+
+  .slide-panel-top {
+    top: -110px;
+  }
+
+  .slide-panel-bottom {
+    bottom: -110px;
+  }
+
+}
+
+@media screen and (max-height: 26.375em){
+
+  .slide-panel-vertical {
+    font-size: 90%;
+    width: 190px;
+  }
+
+  .slide-panel-left,
+  .slide-panel-push-toleft {
+    left: -190px;
+  }
+
+  .slide-panel-right {
+    right: -190px;
+  }
+
+  .slide-panel-push-toright {
+    left: 190px;
+  }
 }
