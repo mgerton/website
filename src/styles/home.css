@@ -16,17 +16,8 @@ body {
     center 0
     url("../images/chicago-sunset.jpg") no-repeat;
 
-  /*background-attachment: fixed;*/
   background-size: cover;
 
-  /*font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Arimo", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Oxygen", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Cabin", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Crimson Text", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Gentium Basic", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Vollkorn", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   color: rgb(255, 255, 255);
@@ -40,9 +31,6 @@ body {
 }
 
 .heading h1 {
-  /*font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Julius Sans One", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-  /*font-family: "Open Sans Condensed", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 800;
 
@@ -50,8 +38,6 @@ body {
 
   text-transform: uppercase;
   letter-spacing: 1px;
-  /*line-height: 114px;
-  font-size: 104px;*/
 
   text-shadow:
     0 1px 0 rgba(40,40,40,1),
@@ -86,13 +72,6 @@ body {
   color: rgb(255,255,255);
 }
 
-.blurb p {
-  font-size: 42px;
-  line-height: 52px;
-  /*font-style: italic;*/
-  /*letter-spacing: 1px;*/
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -116,10 +95,6 @@ footer {
   font-size: 32px;
   color: rgb(255, 255, 255);
 }
-
-/*.find-me-nav .links li a:hover {
-  color: rgb(255, 255, 255);
-}*/
 
 /**
  * Mobile styles: extra-small devices (< 768px)
@@ -157,7 +132,6 @@ footer {
     font-size: 40px;
     line-height: 50px;
     padding: 20px 46px;
-    /*margin: 0 18px;*/
   }
 }
 
