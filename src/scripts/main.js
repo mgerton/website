@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function main() {
     overlay
   ];
 
+  // Register FastClick to remove delays on mobile
+  if (window.FastClick) {
+    FastClick.attach(document.body);
+  }
+
   function toggleOffCanvas(e) {
       e.preventDefault();
 
