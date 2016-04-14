@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Only use the subdomain for resume
+Redirect 302 /resume/ http://resume.mattgerton.com/
