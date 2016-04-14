@@ -23,7 +23,7 @@ var ts = new Date().getTime();
 var releaseDir = `mgerton-com-${ts}`;
 
 // run commands on localhost
-plan.local('package', function (local) {
+plan.local(function (local) {
   var filesToCopy;
   var env = plan.runtime.target;
 
@@ -36,7 +36,7 @@ plan.local('package', function (local) {
 });
 
 // run commands on the target's remote hosts
-plan.remote('deploy', function (remote) {
+plan.remote(function (remote) {
   var env = plan.runtime.target;
   var webRoot = plan.runtime.options.webRoot.split('/').pop();
 
