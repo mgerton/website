@@ -1,25 +1,7 @@
 # My Website
-This is the repository for [mattgerton.com](http://mattgerton.com).
 
-## Running locally
+This is the repository for [mattgerton.com](http://mattgerton.com). This version of the site is built using [Gatsby](https://www.gatsbyjs.org/).
 
-Currently, repo runs off of node 4.2.4. Check `.nvmrc` for correct version before installing global modules (Gulp, Flightplan) or install version if needed.
+## Running Locally
 
-To install/use:
-
-    $ nvm install 4.2.4
-	$ nvm use 4.2.4
-    $ npm install -g gulp flightplan
-
-To run:
-
-    $ cd /path/to/repo
-    $ nvm use
-    $ npm install
-    $ gulp serve
-
-## Deploying
-
-If [Flightplan](https://github.com/pstadler/flightplan) is installed globally, use `fly`, otherwise use `node_modules/.bin/fly` to run commands. Current environments are `staging` and `production`. **Make sure changes are committed and pushed prior to deployment; script relies on `git ls-files` to determine what should be deployed.**
-
-    $ fly <env>
+If for some strange reason you want to pull down my site and run it locally, make sure you first have NodeJS installed (see exact version in `.nvmrc`) and preferably Yarn. Run `yarn` to install dependencies, then run `gatsby develop` to start a local live-reload server.

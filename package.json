@@ -1,20 +1,17 @@
 {
   "name": "website",
-  "version": "1.0.0",
+  "version": "3.0.0-pre",
   "description": "My personal website.",
   "author": "Matt Gerton <matt.gerton@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "del": "^1.1.1",
-    "flightplan": "^0.6.13",
-    "gulp": "^3.8.11",
-    "gulp-serve": "^0.3.1",
-    "gulp-shell": "^0.4.0",
-    "moment": "^2.10.2",
-    "vinyl-paths": "^1.0.0",
-    "yargs": "^3.32.0"
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
-  "engines": {
-    "node": ">=4.2"
+  "dependencies": {
+    "gatsby": "next",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
   }
 }
