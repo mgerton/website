@@ -1,0 +1,94 @@
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+
+.jumbotron {
+  margin: 0 1rem;
+}
+
+.jumbotron h1 {
+  margin-left: 1rem;
+  margin-bottom: 0;
+  margin-top: 6rem;
+  font-size: 4.5rem; /* 72px */
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.jumbotron h2 {
+  width: 19.25rem;
+  margin-left: 1rem;
+  color: #616E7F;
+  font-size: 1.5rem; /* 24px */
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .main-nav > .compact-menu {
+    display: none;
+  }
+
+  .main-nav > .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: -1.5rem;
+  }
+
+  .jumbotron h2 {
+    width: 37.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /*  */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* .main-nav > .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .main-nav > .menu li {
+    margin: 0;
+    padding: 2em;
+    list-style: none;
+  } */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .jumbotron h1 {
+    margin-left: 12rem;
+    margin-bottom: 0;
+    margin-top: 10rem;
+    font-size: 6rem; /* 96px */
+  }
+
+  .jumbotron h2 {
+    width: 37.5rem; /* 600px */
+    margin-left: 12rem;
+    font-size: 1.75rem; /* 28px */
+  }
+}

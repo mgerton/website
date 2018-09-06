@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700,900|Open+Sans');
+
+html, body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.TopBar {
+  background-color: #116BE5;
+  height: 5px;
+  width: 100%;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+}
+
+.Logo > img {
+  width: 55px;
+}
+
+/* TODO: remove me when images are figured out */
+.Logo > div {
+  width: 55px;
+  height: 55px;
+  background-color: #116BE5;
+}
+
+.NavLink {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding-bottom: 0.75rem;
+  color: #000000;
+  border-bottom: 2px solid #116BE5;
+}
+
+.MainNav,
+.CompactNav {
+  margin: 0;
+  padding: 0;
+}
+
+.MainNav {
+  display: none;
+}
+
+.CompactNav {}
+
+.CompactNav > .NavOverlay {
+  position: fixed;
+  background-color: #116BE5;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  transform: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+
+/* TODO: use NavLink styles and override colors */
+/* .CompactMenu .Overlay .NavLink {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding-bottom: 0.75rem;
+  color: #ffffff;
+  border-bottom: 2px solid #BB6BD9;
+}
+
+.CompactNav .NavOverlay {
+  position: fixed;
+  background-color: #116BE5;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  transform: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+}
+
+.CompactNav > .NavOverlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+
+.CompactNav > .NavOverlay.open li {
+  animation: fadeInRight .5s ease-in forwards;
+  animation-delay: .35s;
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .CompactNav {
+    display: none;
+  }
+
+  .MainNav {
+    display: block;
+  }
+
+  .MainNav .Menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin: 0;
+    list-style: none;
+  }
+
+  .MainNav .Menu li {
+    padding: 0 2rem;
+  }
+
+  .MainNav .Menu li:last-child {
+    padding-right: 0.5rem;
+  }
+}
