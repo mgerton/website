@@ -5,16 +5,16 @@
   "author": "Matt Gerton <matt.gerton@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "del": "^1.1.1",
+    "del": "^6.0.0",
     "flightplan": "^0.6.13",
-    "gulp": "^3.8.11",
-    "gulp-serve": "^0.3.1",
-    "gulp-shell": "^0.4.0",
+    "gulp": "^4.0.2",
+    "gulp-serve": "^1.4.0",
+    "gulp-shell": "^0.8.0",
     "moment": "^2.10.2",
-    "vinyl-paths": "^1.0.0",
-    "yargs": "^3.32.0"
+    "vinyl-paths": "^3.0.1",
+    "yargs": "^17.0.1"
   },
   "engines": {
-    "node": ">=4.2"
+    "node": ">=10.13"
   }
 }
