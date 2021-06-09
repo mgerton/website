@@ -4,6 +4,16 @@
   "description": "My personal website.",
   "author": "Matt Gerton <matt.gerton@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^10.2.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "devDependencies": {
     "del": "^6.0.0",
     "flightplan": "^0.6.13",
