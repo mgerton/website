@@ -1,6 +1,8 @@
+import { Title } from '../components/typography/headings';
+
 export default function IndexPage() {
   return <main className="container home" role="main">
-    <h1>Matt Gerton</h1>
+    <Title>Matt Gerton</Title>
 
     <hr />
 
