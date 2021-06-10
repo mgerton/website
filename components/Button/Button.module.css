@@ -1,0 +1,14 @@
+.primary {
+  /* color: #00ea9f; */
+  color: #ffffff;
+  border: 1px solid #05b37b;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 16px 24px;
+  border-width: 2px;
+  text-decoration: none;
+  background-color: #05b37b;
+  font-family: "Lora", "Times New Roman", Times, serif;
+  cursor: default;
+}

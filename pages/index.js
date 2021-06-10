@@ -1,18 +1,14 @@
 import { Title } from '../components/typography/headings';
+import { Button } from '../components/Button/Button';
+import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup';
 
 export default function IndexPage() {
   return <main className="container home" role="main">
     <Title>Matt Gerton</Title>
 
-    <hr />
-
-    <div className="button-links">
-      <a href="#" className="btn">
-        About Me
-      </a>
-      <a href="//resume.mattgerton.com" className="btn">
-        Résumé
-      </a>
-    </div>
+    <ButtonGroup>
+      <Button href="#">About Me</Button>
+      <Button href="//resume.mattgerton.com">Résumé</Button>
+    </ButtonGroup>
   </main>;
 }
