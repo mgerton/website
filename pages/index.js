@@ -2,7 +2,7 @@ import { Title } from '../components/typography/headings';
 import { Button } from '../components/Button/Button';
 import { ButtonGroup } from '../components/ButtonGroup/ButtonGroup';
 
-export default function IndexPage() {
+const IndexPage = () => {
   return <main className="container home" role="main">
     <Title>Matt Gerton</Title>
 
@@ -11,4 +11,6 @@ export default function IndexPage() {
       <Button href="//resume.mattgerton.com">Résumé</Button>
     </ButtonGroup>
   </main>;
-}
+};
+
+export default IndexPage;
