@@ -1,9 +1,21 @@
 {
   "name": "website",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "description": "My personal website.",
   "author": "Matt Gerton <matt.gerton@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^2.10.5"
+  },
   "devDependencies": {
     "del": "^1.1.1",
     "flightplan": "^0.6.13",
@@ -15,6 +27,6 @@
     "yargs": "^3.32.0"
   },
   "engines": {
-    "node": ">=4.2"
+    "node": ">=16.12"
   }
 }
