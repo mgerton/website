@@ -54,7 +54,7 @@ const { metaDescription, title } = Astro.props;
 		margin-bottom: 1em;
 	}
 
-	:global(.astro-a) {
+	.astro-a {
 		position: absolute;
 		top: -32px;
 		left: 50%;
@@ -63,7 +63,7 @@ const { metaDescription, title } = Astro.props;
 		height: auto;
 		z-index: -1;
 	}
-	:global(.text-gradient) {
+	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
