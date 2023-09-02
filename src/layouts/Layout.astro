@@ -8,7 +8,7 @@ const { metaDescription, title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full motion-safe:scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={metaDescription}>
@@ -17,11 +17,19 @@ const { metaDescription, title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Matt Gerton | {title}</title>
 	</head>
-	<body>
+	<body class="box-border h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary">
 		<slot />
 	</body>
 </html>
 <style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+	}
+</style>
+<!-- <style is:global>
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -70,4 +78,4 @@ const { metaDescription, title } = Astro.props;
 		background-size: 400%;
 		background-position: 0%;
 	}
-</style>
+</style> -->
