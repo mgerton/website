@@ -1,41 +1,43 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import Card from '@components/Card.astro';
+import Layout from "@layouts/Layout.astro";
+import { Icon } from 'astro-icon/components'
 
-import portait from "../images/matt.jpg";
+import siteLogo from "@images/mg_site_logo_2024.png?url";
+import mattHeadshot from "@images/matt_headshot_no_bg.png?url";
 ---
 
 <Layout title="Home" metaDescription="Matt Gerton's homepage">
-	<!-- <main class="max-w-6xl m-auto"> -->
-	<main class="grid grid-cols-1 h-screen">
-		<!-- <header class="flex flex-2 gap-6 self-end lg:gap-8 items-center justify-center p-8 lg:p-12"> -->
-		<!-- <ul role="list" class="grid gap-8 grid-cols-1 self-start"> -->
-		<header class="flex flex-2 flex-col lg:flex-row gap-6 lg:gap-8 items-center justify-self-center p-8">
-			<img src={portait} class="rounded-full w-36 h-36 lg:w-44 lg:h-44 object-cover border-4 border-cyan-600" />
-			<h1 class="font-sans font-bold text-5xl lg:text-7xl">Matt Gerton</h1>
-		</header>
+	<header class="flex items-center px-8 py-7">
+		<nav class="main-nav flex flex-auto">
+			<span class="logo w-16"><img src={siteLogo} alt="website main logo" /></span>
+			<ul class="flex items-center justify-between ml-16">
+				<li class="px-5 text-lg font-normal">About</li>
+				<li class="px-5 text-lg font-normal">My Work</li>
+				<li class="px-5 text-lg font-normal">Blog</li>
+				<li class="px-5 text-lg font-normal font-">Contact</li>
+			</ul>
+		</nav>
+		<div class="flex items-center">
+			<span class="pl-5 text-lg font-normal">Find me on:</span>
+			<nav class="social-links">
+				<ul class="flex items-center">
+					<li class="px-1 border-r-2 border-black"><Icon name="fa6-brands:linkedin" class="text-3xl mx-2" /></li>
+					<li class="px-1"><Icon name="fa6-brands:github" class="text-3xl mx-2" /></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-		<ul role="list" class="flex flex-col gap-6 w-fit self-start justify-self-center">
-			<Card
-				href="/about"
-				title="About Me"
-				body="Learn about how I work and live my life."
-			/>
-			<Card
-				href="/my-work"
-				title="My Work"
-				body="See my resume and highlighted personal and professional projects."
-			/>
-			<Card
-				href="/about/website"
-				title="About this site"
-				body="Learn about how this site is built and run, along with my tools of choice."
-			/>
-			<Card
-				href="/connect"
-				title="Connect"
-				body="Interested in contacting me about opportunities? Find out here."
-			/>
-		</ul>
+	<main class="flex items-center justify-evenly pt-14 pr-28 gap-48">
+		<section class="flex flex-[1_0_0%] flex-col max-w-xl mb-auto mt-44">
+			<header>
+				<h1 class="font-bold text-7xl pb-9">Matt Gerton</h1>
+				<h2 class="text-[1.75rem] leading-[2.125rem] pb-16">Software professional and technology enthusiast based in Southern California</h2>
+			</header>
+			<a class="inline-flex justify-center rounded-lg text-md text-white font-medium py-2.5 px-4 bg-blue-400 w-52" href="/about">More about Matt</a>
+		</section>
+		<section>
+			<img src={mattHeadshot} alt="matt headshot" class="w-3xl" />
+		</section>
 	</main>
 </Layout>
