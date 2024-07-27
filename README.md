@@ -8,20 +8,25 @@ NOTE: This site is a work-in-progress and in semi-active development (when I hav
 
 ## Running locally
 
-Install a current LTS version of Node first (`v20.x` at the time of this writing) using your tool of choice (I prefer NVM):
+### Prerequesites
+
+At the time of writing, this repository currently relies on the following:
+
+* Node.js (via NVM)
+* pnpm
+
+Install the specified LTS of Node using NVM:
 
 ```sh
-$ nvm install --lts
-$ nvm use
-$ npm ci  # to ensure stable installations before upgrading packages
-$ npm run dev
+$ nvm install --lts && nvm use
 ```
+Then install pnpm following the [installation docs](https://pnpm.io/installation).
 
-On a fresh installs, there might be Node-related utils to install beforehand - something to be aware of.
+To run, simply run `pnpm dev`.
 
 ### Troubleshooting Installs and/or Startup
 
-When all else fails, `rm -rf node_modules && npm ci` is your best friend.
+When all else fails, `rm -rf node_modules && pnpm install` is your best friend.
 
 ## Deploying
 
