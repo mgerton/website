@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+import siteLogo from "@images/mg_site_logo_2024.png?url";
+---
+
+<header class="flex items-center px-8 py-2 border-b-2">
+  <div class="w-[1280px] m-auto flex">
+    <nav class="main-nav flex flex-auto">
+      <span class="logo w-16"><img src={siteLogo} alt="website main logo" /></span>
+      <ul class="flex items-center justify-between ml-12">
+        <li class="px-5 text-lg font-normal">About Me</li>
+        <li class="px-5 text-lg font-normal">My Work</li>
+        <li class="px-5 text-lg font-normal font-">Contact</li>
+      </ul>
+    </nav>
+
+    <div class="flex items-center">
+      <span class="pl-5 text-lg font-normal">Find me on:</span>
+      <nav class="social-links">
+        <ul class="flex items-center">
+          <li class="px-1 border-r-2 border-black"><Icon name="fa6-brands:linkedin" class="text-3xl mx-2" /></li>
+          <li class="px-1"><Icon name="fa6-brands:github" class="text-3xl mx-2" /></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
