@@ -1,0 +1,13 @@
+---
+interface Props {
+	label: string;
+  href?: string;
+}
+
+const { label, href } = Astro.props;
+const Element = href ? 'a' : 'button';
+---
+
+<Element class="rounded-lg text-lg border-brand-primary text-brand-primary font-medium py-2.5 px-4 bg-transparent transition ease-linear hover:bg-brand-primary hover:text-brand-white border-2 w-52" href={href}>
+  {label}
+</Element>
