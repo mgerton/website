@@ -1,24 +1,25 @@
 ---
-import Layout from "@layouts/Layout.astro";
+import HomeLayout from "@layouts/HomeLayout.astro";
+import Button from "@components/Button.astro";
 
-import heroImage from "@images/matt_hero_img.png?url";
+import { Image } from 'astro:assets';
+import heroImage from "@images/matt_hero_img.png";
 ---
 
-<Layout title="Home" metaDescription="Matt Gerton's homepage">
-	<!-- <main class="flex items-center justify-evenly pt-14 pr-28 gap-48"> -->
-	<main class="flex items-center justify-center pt-14">
-		<section class="flex flex-[1_0_0%] flex-col max-w-xl mb-auto mt-44 items-center text-center">
-			<header>
-				<h1 class="font-bold text-7xl pb-9">Matt Gerton</h1>
-				<h2 class="text-[1.75rem] leading-[2.125rem] pb-16">Experienced Software Engineer and Technology Enthusiast</h2>
+<HomeLayout title="Home" metaDescription="Matt Gerton's homepage">
+	<main class="grid grid-flow-row md:grid-flow-col items-center justify-center pt-14 md:gap-24">
+		<section class="flex flex-col items-center text-center order-2 pb-32 md:order-1 md:pb-0">
+			<header class="flex flex-col items-center text-center">
+				<h1 class="font-bold text-7xl text-content-primary pb-9">Matt Gerton</h1>
+				<h2 class="text-content-primary w-[28rem] text-[1.75rem] leading-[2.125rem] pb-16">Experienced Software Engineer and Technology Enthusiast</h2>
 			</header>
 			<div class="inline-flex items-center justify-center gap-6">
-				<a class="rounded-lg text-md text-white font-medium py-2.5 px-4 bg-blue-400 w-52" href="/about">About Me</a>
-				<a class="rounded-lg text-md text-white font-medium py-2.5 px-4 bg-blue-400 w-52" href="/about">My Work</a>
+				<Button href="/about" label="About Me" />
+				<Button href="/my-work" label="My Work" />
 			</div>
 		</section>
-		<section>
-			<img src={heroImage} alt="matt headshot" class="w-3xl" />
+		<section class="flex items-center justify-center order-1 md:order-2">
+			<Image src={heroImage} alt="Matt Gerton headshot" class="w-xl" loading="eager" />
 		</section>
 	</main>
-</Layout>
+</HomeLayout>
