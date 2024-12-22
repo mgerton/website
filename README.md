@@ -28,6 +28,27 @@ To run, simply run `pnpm dev`.
 
 When all else fails, `rm -rf node_modules && pnpm install` is your best friend.
 
+### Running with Deno
+
+In an effort to simplify my life tech-wise, I am experimenting with different JS runtimes - namely, Deno and Bun. To run this app on Deno, all that is requireed is having Deno installed in the system in question (use the [deno docs](https://docs.deno.com/runtime/getting_started/installation/) to set this up) and then simply use the CLI to run it:
+
+```sh
+$ deno task dev
+```
+
+And things should work out just fine. Further Deno integration (ex. removing node_modules directory, etc.) is still exploratory at this time.
+
+#### Running with Bun
+
+Similar to Deno, first make sure Bun is installed (or [install it](https://bun.sh/docs/installation)), then attempt to install dependencies (if needed) and run using the CLI:
+
+```sh
+$ bun install
+$ bun run dev
+```
+
+Note: Astro has [some docs](https://docs.astro.build/en/recipes/bun/) on running on Bun that can provide some additional support should it be needed.
+
 ## Deploying
 
 Previously this site used a bespoke system using [Flightplan](https://github.com/pstadler/flightplan) that would connect to the server that currently runs my website and use some combination of SSH + Git magic to load the latest from the main branch. New deployment process is TBD but will likely leverage a combination of Astro's build + GitHub Actions to deploy somewhere, either the same shared host provider in-use today or to a new provider better optimized static hosting.
